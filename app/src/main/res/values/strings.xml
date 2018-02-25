@@ -11,8 +11,10 @@ He didn\'t say any more but we\'ve always been unusually communicative in a rese
     <string name="without_barrier">Without Barrier</string>
     <string name="barriers">Barriers</string>
     <string name="circular_constraints">Circular Constraints</string>
-    <string name="increase_inner_element">+15° Inner Element</string>
-    <string name="increase_outer_element">+15° Outer Element</string>
+    <string name="increase_inner_angle">+15° Inner Element</string>
+    <string name="increase_outer_angle">+15° Outer Element</string>
     <string name="center_item">Center Item</string>
     <string name="reset">Reset</string>
+    <string name="_15_dp_outer_radius">+15 DP Outer Radius</string>
+    <string name="_15_dp_inner_radius">+15 DP Inner Radius</string>
 </resources>
