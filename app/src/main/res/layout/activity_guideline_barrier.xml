@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/switchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch 'Short' and 'Kinda Long'"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/middleDivider"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="#FF000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- No Barrier (top half) -->
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/noBarrierText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/without_barrier"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchButton" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/noBarrierFirstText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/short_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noBarrierText" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/noBarrierSecondText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/kinda_long_text"
+        app:layout_constraintStart_toStartOf="@id/noBarrierFirstText"
+        app:layout_constraintTop_toBottomOf="@id/noBarrierFirstText" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/noBarrierLongText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/base_margin"
+        android:layout_marginStart="@dimen/base_margin_quarter"
+        android:ellipsize="end"
+        android:text="@string/gatsby_text"
+        app:layout_constraintBottom_toTopOf="@id/middleDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/noBarrierSecondText"
+        app:layout_constraintTop_toTopOf="@id/noBarrierFirstText" />
+
+    <!-- No barrier (bottom half) -->
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/barrierText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/with_barrier"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middleDivider" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/barrierFirstText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/short_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierText" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/barrierSecondText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/kinda_long_text"
+        app:layout_constraintStart_toStartOf="@id/barrierFirstText"
+        app:layout_constraintTop_toBottomOf="@id/barrierFirstText" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="barrierFirstText, barrierSecondText"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/barrierLongText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/base_margin"
+        android:layout_marginStart="@dimen/base_margin_quarter"
+        android:ellipsize="end"
+        android:text="@string/gatsby_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toTopOf="@id/barrierFirstText" />
+</android.support.constraint.ConstraintLayout>
