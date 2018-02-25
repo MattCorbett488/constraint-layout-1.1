@@ -17,5 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".BarrierActivity" />
+        <activity android:name=".CircularConstraintActivity" />
     </application>
 </manifest>

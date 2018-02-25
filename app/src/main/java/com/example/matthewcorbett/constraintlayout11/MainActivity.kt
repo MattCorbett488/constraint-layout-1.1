@@ -17,5 +17,8 @@ class MainActivity : AppCompatActivity() {
         barrierGuidelineButton.setOnClickListener {
             startActivity(Intent(this, BarrierActivity::class.java))
         }
+        circleConstraintButton.setOnClickListener {
+            startActivity(Intent(this, CircularConstraintActivity::class.java))
+        }
     }
 }
