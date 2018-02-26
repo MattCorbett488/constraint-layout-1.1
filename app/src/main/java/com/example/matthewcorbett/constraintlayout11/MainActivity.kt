@@ -23,5 +23,9 @@ class MainActivity : AppCompatActivity() {
         percentRatioButton.setOnClickListener {
             startActivity(Intent(this, DimensionConstraintActivity::class.java))
         }
+
+        //TODO: Placeholder
+
+        //TODO: Group
     }
 }
