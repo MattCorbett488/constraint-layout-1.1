@@ -17,4 +17,6 @@ He didn\'t say any more but we\'ve always been unusually communicative in a rese
     <string name="reset">Reset</string>
     <string name="_15_dp_outer_radius">+15 DP Outer Radius</string>
     <string name="_15_dp_inner_radius">+15 DP Inner Radius</string>
+    <string name="percent_ratio_text"><![CDATA[Dimension Constraints (Percent & Ratio)]]></string>
+    <string name="percent_0_100">Percent (0-100):</string>
 </resources>

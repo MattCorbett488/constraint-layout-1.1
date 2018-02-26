@@ -26,4 +26,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrierGuidelineButton" />
 
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/percentRatioButton"
+        style="@style/ButtonStyle"
+        android:text="@string/percent_ratio_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/circleConstraintButton"/>
 </android.support.constraint.ConstraintLayout>

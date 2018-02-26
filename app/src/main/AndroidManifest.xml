@@ -18,5 +18,6 @@
         </activity>
         <activity android:name=".BarrierActivity" />
         <activity android:name=".CircularConstraintActivity" />
+        <activity android:name=".DimensionConstraintActivity" />
     </application>
 </manifest>

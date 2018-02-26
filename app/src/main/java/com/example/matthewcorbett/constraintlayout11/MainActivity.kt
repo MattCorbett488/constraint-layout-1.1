@@ -20,5 +20,8 @@ class MainActivity : AppCompatActivity() {
         circleConstraintButton.setOnClickListener {
             startActivity(Intent(this, CircularConstraintActivity::class.java))
         }
+        percentRatioButton.setOnClickListener {
+            startActivity(Intent(this, DimensionConstraintActivity::class.java))
+        }
     }
 }
