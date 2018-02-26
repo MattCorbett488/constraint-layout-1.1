@@ -11,4 +11,5 @@
 
     <dimen name="inner_radius">50dp</dimen>
     <dimen name="outer_radius">100dp</dimen>
+    <dimen name="circle_diameter">46dp</dimen>
 </resources>

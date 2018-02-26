@@ -59,8 +59,8 @@
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/centerElement"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/circle_diameter"
+        android:layout_height="@dimen/circle_diameter"
         android:contentDescription="@string/center_item"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintVertical_bias="0.7"
@@ -71,8 +71,8 @@
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/innerElement"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/circle_diameter"
+        android:layout_height="@dimen/circle_diameter"
         android:contentDescription="@string/center_item"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintCircle="@id/centerElement"
@@ -81,8 +81,8 @@
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/outerElement"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/circle_diameter"
+        android:layout_height="@dimen/circle_diameter"
         android:contentDescription="@string/center_item"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintCircle="@id/centerElement"
