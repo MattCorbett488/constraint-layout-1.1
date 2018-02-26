@@ -3,11 +3,10 @@ package com.example.matthewcorbett.constraintlayout11
 import android.animation.ValueAnimator
 import android.animation.ValueAnimator.INFINITE
 import android.animation.ValueAnimator.RESTART
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
-import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.AppCompatImageView
 import android.view.View
 import android.view.animation.LinearInterpolator
 import kotlinx.android.synthetic.main.activity_circular_constraints.*
@@ -28,21 +27,22 @@ class CircularConstraintActivity : AppCompatActivity() {
         setContentView(R.layout.activity_circular_constraints)
 
         initFaces()
-        initAnimators()
+        innerAnimator = initAnimator(innerElement, 1.0f)
+        outerAnimator = initAnimator(outerElement, 1.5f)
         setListeners()
     }
 
     private fun initFaces() {
         val facesList = arrayListOf(R.mipmap.ic_adam, R.mipmap.ic_eric, R.mipmap.ic_matt)
-        centerElement.setImageDrawable(getFace(facesList))
-        innerElement.setImageDrawable(getFace(facesList))
-        outerElement.setImageDrawable(getFace(facesList))
+        centerElement.setCircleImage(getFace(facesList))
+        innerElement.setCircleImage(getFace(facesList))
+        outerElement.setCircleImage(getFace(facesList))
     }
 
-    private fun getFace(faces: ArrayList<Int>): Drawable {
+    private fun getFace(faces: ArrayList<Int>): Int {
         val face = faces[random.nextInt(faces.size)]
         faces.remove(face)
-        return ContextCompat.getDrawable(this, face)
+        return face
     }
 
     private fun setListeners() {
@@ -74,24 +74,14 @@ class CircularConstraintActivity : AppCompatActivity() {
         }
     }
 
-    private fun initAnimators() {
-        innerAnimator = ValueAnimator.ofInt(0, 359)
-        outerAnimator = ValueAnimator.ofInt(0, 359)
-
-        innerAnimator.duration = defaultRotationTimeMs.toLong()
-        outerAnimator.duration = (defaultRotationTimeMs * 1.5).toLong()
-
-        innerAnimator.addUpdateListener { incrementAngle(innerElement, 1) }
-        outerAnimator.addUpdateListener { incrementAngle(outerElement, 1) }
-
-        innerAnimator.interpolator = LinearInterpolator()
-        outerAnimator.interpolator = LinearInterpolator()
-
-        innerAnimator.repeatMode = RESTART
-        outerAnimator.repeatMode = RESTART
-
-        innerAnimator.repeatCount = INFINITE
-        outerAnimator.repeatCount = INFINITE
+    private fun initAnimator(view: View, durationOffset: Float): ValueAnimator {
+        return ValueAnimator.ofInt(0, 359).apply {
+            duration = (defaultRotationTimeMs * durationOffset).toLong()
+            addUpdateListener { incrementAngle(view, 1) }
+            interpolator = LinearInterpolator()
+            repeatMode = RESTART
+            repeatCount = INFINITE
+        }
     }
 
     private fun incrementAngle(view: View, angleIncrement: Int) {
@@ -119,5 +109,9 @@ class CircularConstraintActivity : AppCompatActivity() {
         incrementInnerAngle.isEnabled = enabled
         incrementInnerRadius.isEnabled = enabled
         reset.isEnabled = enabled
+    }
+
+    private fun AppCompatImageView.setCircleImage(drawableRes: Int) {
+        GlideApp.with(this).load(drawableRes).circleCrop().into(this)
     }
 }

@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -32,4 +34,9 @@ dependencies {
 
     implementation "com.android.support.constraint:constraint-layout:1.1.0-beta5"
     implementation "com.android.support:design:26.1.0"
+
+    implementation ("com.github.bumptech.glide:glide:4.6.1") {
+        exclude group: "com.android.support"
+    }
+    kapt 'com.github.bumptech.glide:compiler:4.6.1'
 }
