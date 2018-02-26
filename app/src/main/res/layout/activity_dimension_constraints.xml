@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/percentEntryButton"
+        android:id="@+id/percentEntry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,7 +18,28 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="numberSigned"
+            android:inputType="number"
+            android:text="@string/default_percentage"
             android:hint="@string/percent_0_100" />
     </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/percentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/percent_text"
+        android:layout_marginStart="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/percentEntry"
+        tools:text="10 percent"/>
+
+    <View
+        android:id="@+id/percentView"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="#FF1234FF"
+        app:layout_constraintTop_toBottomOf="@id/percentText"
+        app:layout_constraintStart_toStartOf="@id/percentText"
+        app:layout_constraintWidth_percent="0.1"/>
 </android.support.constraint.ConstraintLayout>
