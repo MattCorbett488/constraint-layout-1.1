@@ -6,25 +6,46 @@
 
 
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/incrementInner"
+        android:id="@+id/incrementInnerAngle"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin"
-        android:text="@string/increase_inner_element"
-        app:layout_constraintEnd_toStartOf="@+id/incrementOuter"
+        android:text="@string/increase_inner_angle"
+        app:layout_constraintEnd_toStartOf="@+id/incrementOuterAngle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/incrementOuter"
+        android:id="@+id/incrementOuterAngle"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/increase_outer_element"
+        android:text="@string/increase_outer_angle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/incrementInner"
-        app:layout_constraintTop_toTopOf="@id/incrementInner" />
+        app:layout_constraintStart_toEndOf="@id/incrementInnerAngle"
+        app:layout_constraintTop_toTopOf="@id/incrementInnerAngle" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/incrementInnerRadius"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/_15_dp_inner_radius"
+        app:layout_constraintEnd_toStartOf="@+id/incrementOuterRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/incrementInnerAngle" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/incrementOuterRadius"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_15_dp_outer_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/incrementInnerRadius"
+        app:layout_constraintTop_toTopOf="@id/incrementInnerRadius" />
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/reset"
@@ -34,7 +55,7 @@
         android:text="@string/reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/incrementInner" />
+        app:layout_constraintTop_toBottomOf="@id/incrementInnerRadius" />
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/centerElement"
@@ -42,6 +63,7 @@
         android:layout_height="32dp"
         android:contentDescription="@string/center_item"
         android:src="@drawable/ic_launcher_background"
+        app:layout_constraintVertical_bias="0.7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +77,7 @@
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintCircle="@id/centerElement"
         app:layout_constraintCircleAngle="0"
-        app:layout_constraintCircleRadius="50dp" />
+        app:layout_constraintCircleRadius="@dimen/inner_radius" />
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/outerElement"
@@ -65,5 +87,5 @@
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintCircle="@id/centerElement"
         app:layout_constraintCircleAngle="0"
-        app:layout_constraintCircleRadius="100dp" />
+        app:layout_constraintCircleRadius="@dimen/outer_radius" />
 </android.support.constraint.ConstraintLayout>

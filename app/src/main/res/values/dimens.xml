@@ -6,4 +6,9 @@
     <dimen name="base_margin_quarter">4dp</dimen>
 
     <dimen name="button_text_size">16sp</dimen>
+
+    <dimen name="radius_increase_default">6dp</dimen>
+
+    <dimen name="inner_radius">50dp</dimen>
+    <dimen name="outer_radius">100dp</dimen>
 </resources>
