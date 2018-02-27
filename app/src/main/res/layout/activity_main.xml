@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin_double"
         android:text="@string/barriers"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/circleConstraintButton"
@@ -29,11 +29,22 @@
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/percentRatioButton"
         style="@style/ButtonStyle"
-        android:text="@string/percent_ratio_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/percent_ratio_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/circleConstraintButton"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/circleConstraintButton" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/placeholderButton"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/placeholders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/percentRatioButton" />
 </android.support.constraint.ConstraintLayout>

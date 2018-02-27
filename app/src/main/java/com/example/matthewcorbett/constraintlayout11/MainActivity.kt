@@ -24,7 +24,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, DimensionConstraintActivity::class.java))
         }
 
-        //TODO: Placeholder
+        placeholderButton.setOnClickListener {
+            startActivity(Intent(this, PlaceholderActivity::class.java))
+        }
 
         //TODO: Group
     }
