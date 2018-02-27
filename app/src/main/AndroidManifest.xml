@@ -30,5 +30,6 @@
         <activity
             android:name=".PlaceholderActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".PlaceholderRotationActivity" />
     </application>
 </manifest>

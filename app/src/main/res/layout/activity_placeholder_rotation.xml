@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/firstImage"
+        app:srcCompat="@drawable/datboi"
+        android:layout_width="@dimen/circle_diameter"
+        android:layout_height="@dimen/circle_diameter" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/secondImage"
+        app:srcCompat="@drawable/sanic"
+        android:layout_width="@dimen/circle_diameter"
+        android:layout_height="@dimen/circle_diameter" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/thirdImage"
+        app:srcCompat="@drawable/shrek"
+        android:layout_width="@dimen/circle_diameter"
+        android:layout_height="@dimen/circle_diameter" />
+
+    <include layout="@layout/placeholder_rotation_template" />
+</android.support.constraint.ConstraintLayout>

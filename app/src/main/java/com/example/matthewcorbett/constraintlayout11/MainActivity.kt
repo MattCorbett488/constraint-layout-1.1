@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, PlaceholderActivity::class.java))
         }
 
+        placeholderRotationButton.setOnClickListener {
+            startActivity(Intent(this, PlaceholderRotationActivity::class.java))
+        }
         //TODO: Group
     }
 }
