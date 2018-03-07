@@ -46,9 +46,9 @@ class CircularConstraintActivity : AppCompatActivity() {
     }
 
     private fun setListeners() {
-        incrementInnerAngle.setOnClickListener { incrementAngle(innerElement, angleIncrement) }
+        incrementInnerAngle.setOnClickListener { incrementAngle(innerElement, angleIncrement.toFloat()) }
 
-        incrementOuterAngle.setOnClickListener { incrementAngle(outerElement, angleIncrement) }
+        incrementOuterAngle.setOnClickListener { incrementAngle(outerElement, angleIncrement.toFloat()) }
 
         incrementInnerRadius.setOnClickListener { incrementRadius(innerElement, radiusIncrement) }
 
@@ -74,17 +74,17 @@ class CircularConstraintActivity : AppCompatActivity() {
         }
     }
 
-    private fun initAnimator(view: View, durationOffset: Float): ValueAnimator {
+    private fun initAnimator(view: View, offset: Float): ValueAnimator {
         return ValueAnimator.ofInt(0, 359).apply {
-            duration = (defaultRotationTimeMs * durationOffset).toLong()
-            addUpdateListener { incrementAngle(view, 1) }
+            duration = (defaultRotationTimeMs * offset).toLong()
+            addUpdateListener { incrementAngle(view, offset) }
             interpolator = LinearInterpolator()
             repeatMode = RESTART
             repeatCount = INFINITE
         }
     }
 
-    private fun incrementAngle(view: View, angleIncrement: Int) {
+    private fun incrementAngle(view: View, angleIncrement: Float) {
         val params = view.layoutParams as ConstraintLayout.LayoutParams
         params.circleAngle = (params.circleAngle + angleIncrement) % 360
         view.layoutParams = params
