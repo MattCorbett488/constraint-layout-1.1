@@ -14,47 +14,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <ToggleButton
         android:id="@+id/firstHalfButton"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/base_margin"
         android:layout_marginTop="@dimen/base_margin"
-        android:text="@string/first_half_group_1_2_3"
+        android:textOn="@string/first_half_visible"
+        android:textOff="@string/first_half_gone"
+        android:checked="true"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/evenButton"
         app:layout_constraintTop_toBottomOf="@id/visibilityToggleText"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <ToggleButton
         android:id="@+id/secondHalfButton"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/second_half_group_4_5_6"
+        android:textOn="@string/second_half_visible"
+        android:textOff="@string/second_half_gone"
+        android:checked="true"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="@id/firstHalfButton"
         app:layout_constraintTop_toBottomOf="@id/firstHalfButton"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <ToggleButton
         android:id="@+id/evenButton"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/base_margin"
-        android:text="@string/even_group"
+        android:textOn="@string/even_group_visible"
+        android:textOff="@string/even_group_gone"
+        android:checked="true"
         app:layout_constraintStart_toEndOf="@id/firstHalfButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/firstHalfButton"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <ToggleButton
         android:id="@+id/oddButton"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/odd_group"
-        app:layout_constraintStart_toStartOf="@id/evenButton"
+        android:textOn="@string/odd_group_visible"
+        android:textOff="@string/odd_group_gone"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="@id/evenButton"
         app:layout_constraintTop_toTopOf="@id/secondHalfButton"/>
 
     <android.support.v7.widget.AppCompatTextView

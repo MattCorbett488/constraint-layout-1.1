@@ -13,14 +13,14 @@ class GroupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group)
 
-        firstHalfButton.setOnClickListener { updateVisibility(firstHalfGroup) }
-        secondHalfButton.setOnClickListener { updateVisibility(secondHalfGroup) }
-        evenButton.setOnClickListener { updateVisibility(evenGroup) }
-        oddButton.setOnClickListener { updateVisibility(oddGroup) }
+        firstHalfButton.setOnCheckedChangeListener { _, isChecked -> updateVisibility(firstHalfGroup, isChecked) }
+        secondHalfButton.setOnCheckedChangeListener {  _, isChecked -> updateVisibility(secondHalfGroup, isChecked) }
+        evenButton.setOnCheckedChangeListener {  _, isChecked -> updateVisibility(evenGroup, isChecked) }
+        oddButton.setOnCheckedChangeListener {  _, isChecked -> updateVisibility(oddGroup, isChecked) }
     }
 
-    private fun updateVisibility(group: View) {
-        group.visibility = if (group.visibility == GONE) {
+    private fun updateVisibility(group: View, visible: Boolean) {
+        group.visibility = if (visible) {
             VISIBLE
         } else {
             GONE

@@ -31,6 +31,8 @@
             android:name=".PlaceholderActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".PlaceholderRotationActivity" />
-        <activity android:name=".GroupActivity" />
+        <activity
+            android:name=".GroupActivity"
+            android:screenOrientation="portrait" />
     </application>
 </manifest>
