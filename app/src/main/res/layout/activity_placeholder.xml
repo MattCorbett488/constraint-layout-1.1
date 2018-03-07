@@ -10,7 +10,7 @@
         android:layout_width="@dimen/circle_diameter"
         android:layout_height="@dimen/circle_diameter"
         android:layout_marginBottom="@dimen/base_margin_double"
-        app:srcCompat="@drawable/datboi"
+        android:src="@drawable/datboi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/secondFace"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -20,7 +20,7 @@
         android:layout_width="@dimen/circle_diameter"
         android:layout_height="@dimen/circle_diameter"
         android:layout_marginBottom="@dimen/base_margin_double"
-        app:srcCompat="@drawable/shrek"
+        android:src="@drawable/shrek"
         app:layout_constraintStart_toEndOf="@id/firstFace"
         app:layout_constraintEnd_toStartOf="@+id/thirdFace"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -30,7 +30,7 @@
         android:layout_width="@dimen/circle_diameter"
         android:layout_height="@dimen/circle_diameter"
         android:layout_marginBottom="@dimen/base_margin_double"
-        app:srcCompat="@drawable/sanic"
+        android:src="@drawable/sanic"
         app:layout_constraintStart_toEndOf="@id/secondFace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
