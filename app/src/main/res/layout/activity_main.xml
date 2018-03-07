@@ -9,11 +9,11 @@
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/base_margin_double"
         android:text="@string/barriers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/circleConstraintButton"/>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/circleConstraintButton"
@@ -24,7 +24,8 @@
         android:text="@string/circular_constraints"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/barrierGuidelineButton" />
+        app:layout_constraintTop_toBottomOf="@id/barrierGuidelineButton"
+        app:layout_constraintBottom_toTopOf="@+id/percentRatioButton"/>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/percentRatioButton"
@@ -35,7 +36,8 @@
         android:text="@string/percent_ratio_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/circleConstraintButton" />
+        app:layout_constraintTop_toBottomOf="@id/circleConstraintButton"
+        app:layout_constraintBottom_toTopOf="@+id/placeholderButton"/>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/placeholderButton"
@@ -46,7 +48,8 @@
         android:text="@string/placeholders"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/percentRatioButton" />
+        app:layout_constraintTop_toBottomOf="@id/percentRatioButton"
+        app:layout_constraintBottom_toTopOf="@+id/placeholderRotationButton"/>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/placeholderRotationButton"
@@ -57,5 +60,18 @@
         android:text="@string/placeholders_rotation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/placeholderButton" />
+        app:layout_constraintTop_toBottomOf="@id/placeholderButton"
+        app:layout_constraintBottom_toTopOf="@+id/groupButton"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/groupButton"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/groups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/placeholderRotationButton"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </android.support.constraint.ConstraintLayout>

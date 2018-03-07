@@ -23,4 +23,16 @@ He didn\'t say any more but we\'ve always been unusually communicative in a rese
     <string name="default_percentage">10</string>
     <string name="placeholders">Placeholders</string>
     <string name="placeholders_rotation">Placeholders (Rotation)</string>
+    <string name="groups">Groups</string>
+    <string name="text_6">Text 6</string>
+    <string name="text_5">Text 5</string>
+    <string name="text_4">Text 4</string>
+    <string name="text_3">Text 3</string>
+    <string name="text_2">Text 2</string>
+    <string name="text_1">Text 1</string>
+    <string name="first_half_group_1_2_3">First Half Group (1, 2, 3)</string>
+    <string name="second_half_group_4_5_6">Second Half Group (4, 5, 6)</string>
+    <string name="even_group">Even Group</string>
+    <string name="odd_group">Odd Group</string>
+    <string name="visibility_toggles">Visibility Toggles</string>
 </resources>
