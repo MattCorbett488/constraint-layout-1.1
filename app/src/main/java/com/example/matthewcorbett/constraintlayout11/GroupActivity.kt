@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import androidx.view.isVisible
 import kotlinx.android.synthetic.main.activity_group.*
 
 class GroupActivity : AppCompatActivity() {
@@ -13,17 +14,16 @@ class GroupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group)
 
-        firstHalfButton.setOnCheckedChangeListener { _, isChecked -> updateVisibility(firstHalfGroup, isChecked) }
-        secondHalfButton.setOnCheckedChangeListener {  _, isChecked -> updateVisibility(secondHalfGroup, isChecked) }
-        evenButton.setOnCheckedChangeListener {  _, isChecked -> updateVisibility(evenGroup, isChecked) }
-        oddButton.setOnCheckedChangeListener {  _, isChecked -> updateVisibility(oddGroup, isChecked) }
+        firstHalfButton.setOnCheckedChangeListener { _, _ -> firstHalfGroup.updateVisibility() }
+        evenButton.setOnCheckedChangeListener { _, _ -> evenGroup.updateVisibility() }
+        oddButton.setOnCheckedChangeListener { _, _ -> oddGroup.updateVisibility() }
     }
 
-    private fun updateVisibility(group: View, visible: Boolean) {
-        group.visibility = if (visible) {
-            VISIBLE
-        } else {
+    private fun View.updateVisibility() {
+        visibility = if (isVisible) {
             GONE
+        } else {
+            VISIBLE
         }
     }
 }
